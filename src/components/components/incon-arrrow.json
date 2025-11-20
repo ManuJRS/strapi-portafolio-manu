@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_incon_arrrows",
+  "info": {
+    "displayName": "InconArrrow",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "textArrow": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

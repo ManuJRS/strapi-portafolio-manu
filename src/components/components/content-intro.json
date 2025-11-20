@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_components_content_intros",
+  "info": {
+    "displayName": "ContentIntro",
+    "icon": "house"
+  },
+  "options": {},
+  "attributes": {
+    "titleh1": {
+      "type": "string",
+      "required": true
+    },
+    "titleh2": {
+      "type": "string",
+      "required": true
+    },
+    "titleh3": {
+      "type": "string",
+      "required": true
+    },
+    "linkLabel1": {
+      "type": "string",
+      "required": true
+    },
+    "linkUrl1": {
+      "type": "string",
+      "required": true
+    },
+    "linkLabel2": {
+      "type": "string",
+      "required": true
+    },
+    "linkUrl2": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
