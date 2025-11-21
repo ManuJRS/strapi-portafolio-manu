@@ -6,33 +6,58 @@
   },
   "options": {},
   "attributes": {
-    "titleh1": {
-      "type": "string",
-      "required": true
-    },
-    "titleh2": {
-      "type": "string",
-      "required": true
-    },
     "titleh3": {
       "type": "string",
       "required": true
     },
-    "linkLabel1": {
+    "h3Font": {
+      "type": "enumeration",
+      "default": "roboto-mono",
+      "enum": [
+        "anton",
+        "roboto-mono"
+      ]
+    },
+    "titleh1": {
       "type": "string",
       "required": true
+    },
+    "h1Uppercase": {
+      "type": "boolean",
+      "default": true
+    },
+    "h1Font": {
+      "type": "enumeration",
+      "default": "anton",
+      "enum": [
+        "anton",
+        "roboto-mono"
+      ]
+    },
+    "titleh2": {
+      "type": "string",
+      "required": false
+    },
+    "linkLabel1": {
+      "type": "string",
+      "required": false
     },
     "linkUrl1": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "linkLabel2": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "linkUrl2": {
       "type": "string",
-      "required": true
+      "required": false
+    },
+    "showCollapse": {
+      "type": "boolean",
+      "required": true,
+      "default": true
     }
   },
   "config": {}
