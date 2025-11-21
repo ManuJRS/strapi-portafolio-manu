@@ -22,6 +22,19 @@ export interface ComponentsCardPreview extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsCardmedia extends Struct.ComponentSchema {
+  collectionName: 'components_components_cardmedias';
+  info: {
+    displayName: 'cardmedia';
+    icon: 'picture';
+  };
+  attributes: {
+    linktext: Schema.Attribute.String;
+    linkurl: Schema.Attribute.String;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+  };
+}
+
 export interface ComponentsContentIntro extends Struct.ComponentSchema {
   collectionName: 'components_components_content_intros';
   info: {
@@ -47,6 +60,41 @@ export interface ComponentsContentIntro extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsContentTextList extends Struct.ComponentSchema {
+  collectionName: 'components_components_content_text_lists';
+  info: {
+    displayName: 'ContentTextList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    list: Schema.Attribute.Component<'shared.listitem', true>;
+    showlist: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    Text: Schema.Attribute.Text;
+  };
+}
+
+export interface ComponentsDescriptionProject extends Struct.ComponentSchema {
+  collectionName: 'components_components_description_projects';
+  info: {
+    displayName: 'DescriptionProject';
+    icon: 'alien';
+  };
+  attributes: {
+    rol: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Mi papel'>;
+    roltext: Schema.Attribute.String;
+    stack: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Tecnolog\u00EDa utilizada'>;
+    stacktext: Schema.Attribute.String;
+    time: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Tiempo total'>;
+    timetext: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsInconArrrow extends Struct.ComponentSchema {
   collectionName: 'components_components_incon_arrrows';
   info: {
@@ -55,6 +103,31 @@ export interface ComponentsInconArrrow extends Struct.ComponentSchema {
   };
   attributes: {
     textArrow: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsIntroProject extends Struct.ComponentSchema {
+  collectionName: 'components_components_intro_projects';
+  info: {
+    displayName: 'IntroProject';
+    icon: 'message';
+  };
+  attributes: {
+    level: Schema.Attribute.Enumeration<['h1', 'h2', 'h3']>;
+    textIntro: Schema.Attribute.Text;
+    titleIntro: Schema.Attribute.String;
+    uppercase: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface ComponentsTitleDivisor extends Struct.ComponentSchema {
+  collectionName: 'components_components_title_divisors';
+  info: {
+    displayName: 'titleDivisor';
+    icon: 'plus';
+  };
+  attributes: {
+    titleDivisor: Schema.Attribute.String;
   };
 }
 
@@ -67,6 +140,29 @@ export interface NavigationNavLink extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedIconTec extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icon_tecs';
+  info: {
+    displayName: 'iconTec';
+    icon: 'star';
+  };
+  attributes: {
+    imageicon: Schema.Attribute.Media<'images' | 'files'>;
+    texticon: Schema.Attribute.String;
+  };
+}
+
+export interface SharedListitem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_listitems';
+  info: {
+    displayName: 'listitem';
+    icon: 'stack';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Text;
   };
 }
 
@@ -136,9 +232,16 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.card-preview': ComponentsCardPreview;
+      'components.cardmedia': ComponentsCardmedia;
       'components.content-intro': ComponentsContentIntro;
+      'components.content-text-list': ComponentsContentTextList;
+      'components.description-project': ComponentsDescriptionProject;
       'components.incon-arrrow': ComponentsInconArrrow;
+      'components.intro-project': ComponentsIntroProject;
+      'components.title-divisor': ComponentsTitleDivisor;
       'navigation.nav-link': NavigationNavLink;
+      'shared.icon-tec': SharedIconTec;
+      'shared.listitem': SharedListitem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

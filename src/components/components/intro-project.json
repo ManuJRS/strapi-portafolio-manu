@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_components_intro_projects",
+  "info": {
+    "displayName": "IntroProject",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "titleIntro": {
+      "type": "string"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3"
+      ]
+    },
+    "uppercase": {
+      "type": "boolean",
+      "default": true
+    },
+    "textIntro": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
