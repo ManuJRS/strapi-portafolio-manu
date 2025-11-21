@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_nav_links",
+  "info": {
+    "displayName": "nav-link",
+    "icon": "car"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

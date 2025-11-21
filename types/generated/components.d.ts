@@ -58,6 +58,18 @@ export interface ComponentsInconArrrow extends Struct.ComponentSchema {
   };
 }
 
+export interface NavigationNavLink extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_nav_links';
+  info: {
+    displayName: 'nav-link';
+    icon: 'car';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -126,6 +138,7 @@ declare module '@strapi/strapi' {
       'components.card-preview': ComponentsCardPreview;
       'components.content-intro': ComponentsContentIntro;
       'components.incon-arrrow': ComponentsInconArrrow;
+      'navigation.nav-link': NavigationNavLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
