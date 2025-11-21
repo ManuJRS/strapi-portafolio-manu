@@ -670,10 +670,16 @@ export interface ApiInfoInfo extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    hability: Schema.Attribute.Component<'shared.icon-tec', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::info.info'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    textdescription: Schema.Attribute.Text;
+    textintro: Schema.Attribute.Text;
+    titledescription: Schema.Attribute.String;
+    titleintro: Schema.Attribute.String;
+    titlelist: Schema.Attribute.String;
     TitlePage: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -721,6 +727,15 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    componentes: Schema.Attribute.DynamicZone<
+      [
+        'components.intro-project',
+        'components.title-divisor',
+        'components.cardmedia',
+        'components.description-project',
+        'components.content-text-list',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

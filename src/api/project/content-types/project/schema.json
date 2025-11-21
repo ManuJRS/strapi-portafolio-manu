@@ -17,6 +17,16 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "componentes": {
+      "type": "dynamiczone",
+      "components": [
+        "components.intro-project",
+        "components.title-divisor",
+        "components.cardmedia",
+        "components.description-project",
+        "components.content-text-list"
+      ]
     }
   }
 }

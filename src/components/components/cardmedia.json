@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_cardmedias",
+  "info": {
+    "displayName": "cardmedia",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "linktext": {
+      "type": "string"
+    },
+    "linkurl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

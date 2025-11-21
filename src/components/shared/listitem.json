@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_listitems",
+  "info": {
+    "displayName": "listitem",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "bullet": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

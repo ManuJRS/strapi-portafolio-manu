@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_content_text_lists",
+  "info": {
+    "displayName": "ContentTextList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "showlist": {
+      "type": "boolean",
+      "default": true
+    },
+    "list": {
+      "type": "component",
+      "component": "shared.listitem",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

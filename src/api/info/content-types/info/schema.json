@@ -13,6 +13,26 @@
   "attributes": {
     "TitlePage": {
       "type": "string"
+    },
+    "titleintro": {
+      "type": "string"
+    },
+    "textintro": {
+      "type": "text"
+    },
+    "titlelist": {
+      "type": "string"
+    },
+    "hability": {
+      "type": "component",
+      "component": "shared.icon-tec",
+      "repeatable": true
+    },
+    "titledescription": {
+      "type": "string"
+    },
+    "textdescription": {
+      "type": "text"
     }
   }
 }

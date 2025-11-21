@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_icon_tecs",
+  "info": {
+    "displayName": "iconTec",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "imageicon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "texticon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
