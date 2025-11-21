@@ -18,7 +18,8 @@
       "type": "dynamiczone",
       "components": [
         "components.content-intro",
-        "components.incon-arrrow"
+        "components.incon-arrrow",
+        "components.card-preview"
       ]
     }
   }

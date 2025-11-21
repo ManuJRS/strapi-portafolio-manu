@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_components_card_previews",
+  "info": {
+    "displayName": "CardPreview",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "cardLayout": {
+      "type": "enumeration",
+      "required": true,
+      "default": "extended",
+      "enum": [
+        "collapse",
+        "extended"
+      ]
+    },
+    "imageFit": {
+      "type": "enumeration",
+      "required": true,
+      "default": "cover",
+      "enum": [
+        "cover",
+        "contain"
+      ]
+    }
+  },
+  "config": {}
+}

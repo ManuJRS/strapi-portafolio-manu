@@ -614,7 +614,11 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Sections: Schema.Attribute.DynamicZone<
-      ['components.content-intro', 'components.incon-arrrow']
+      [
+        'components.content-intro',
+        'components.incon-arrrow',
+        'components.card-preview',
+      ]
     >;
     TitlePage: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

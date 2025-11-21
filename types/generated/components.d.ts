@@ -1,5 +1,27 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ComponentsCardPreview extends Struct.ComponentSchema {
+  collectionName: 'components_components_card_previews';
+  info: {
+    displayName: 'CardPreview';
+    icon: 'layout';
+  };
+  attributes: {
+    cardLayout: Schema.Attribute.Enumeration<['collapse', 'extended']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'extended'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
+    imageFit: Schema.Attribute.Enumeration<['cover', 'contain']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'cover'>;
+    intro: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ComponentsContentIntro extends Struct.ComponentSchema {
   collectionName: 'components_components_content_intros';
   info: {
@@ -7,12 +29,20 @@ export interface ComponentsContentIntro extends Struct.ComponentSchema {
     icon: 'house';
   };
   attributes: {
-    linkLabel1: Schema.Attribute.String & Schema.Attribute.Required;
-    linkLabel2: Schema.Attribute.String & Schema.Attribute.Required;
-    linkUrl1: Schema.Attribute.String & Schema.Attribute.Required;
-    linkUrl2: Schema.Attribute.String & Schema.Attribute.Required;
+    h1Font: Schema.Attribute.Enumeration<['anton', 'roboto-mono']> &
+      Schema.Attribute.DefaultTo<'anton'>;
+    h1Uppercase: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    h3Font: Schema.Attribute.Enumeration<['anton', 'roboto-mono']> &
+      Schema.Attribute.DefaultTo<'roboto-mono'>;
+    linkLabel1: Schema.Attribute.String;
+    linkLabel2: Schema.Attribute.String;
+    linkUrl1: Schema.Attribute.String;
+    linkUrl2: Schema.Attribute.String;
+    showCollapse: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     titleh1: Schema.Attribute.String & Schema.Attribute.Required;
-    titleh2: Schema.Attribute.String & Schema.Attribute.Required;
+    titleh2: Schema.Attribute.String;
     titleh3: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -93,6 +123,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'components.card-preview': ComponentsCardPreview;
       'components.content-intro': ComponentsContentIntro;
       'components.incon-arrrow': ComponentsInconArrrow;
       'shared.media': SharedMedia;
