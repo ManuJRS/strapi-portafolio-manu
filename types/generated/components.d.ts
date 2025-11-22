@@ -17,6 +17,7 @@ export interface ComponentsCardPreview extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'cover'>;
     intro: Schema.Attribute.String & Schema.Attribute.Required;
     link: Schema.Attribute.String;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
     text: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -31,7 +32,7 @@ export interface ComponentsCardmedia extends Struct.ComponentSchema {
   attributes: {
     linktext: Schema.Attribute.String;
     linkurl: Schema.Attribute.String;
-    media: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
   };
 }
 

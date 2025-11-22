@@ -48,6 +48,11 @@
         "cover",
         "contain"
       ]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
     }
   },
   "config": {}
