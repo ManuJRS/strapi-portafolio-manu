@@ -671,6 +671,7 @@ export interface ApiInfoInfo extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hability: Schema.Attribute.Component<'shared.icon-tec', true>;
+    imginfo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::info.info'> &
       Schema.Attribute.Private;
