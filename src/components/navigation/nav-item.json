@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_nav_items",
+  "info": {
+    "displayName": "nav-item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

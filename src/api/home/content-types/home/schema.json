@@ -21,6 +21,11 @@
         "components.incon-arrrow",
         "components.card-preview"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

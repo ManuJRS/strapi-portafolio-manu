@@ -132,6 +132,18 @@ export interface ComponentsTitleDivisor extends Struct.ComponentSchema {
   };
 }
 
+export interface NavigationNavItem extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_nav_items';
+  info: {
+    displayName: 'nav-item';
+    icon: 'bulletList';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+  };
+}
+
 export interface NavigationNavLink extends Struct.ComponentSchema {
   collectionName: 'components_navigation_nav_links';
   info: {
@@ -213,6 +225,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
   attributes: {
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    noIndex: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     shareImage: Schema.Attribute.Media<'images'>;
   };
 }
@@ -240,6 +253,7 @@ declare module '@strapi/strapi' {
       'components.incon-arrrow': ComponentsInconArrrow;
       'components.intro-project': ComponentsIntroProject;
       'components.title-divisor': ComponentsTitleDivisor;
+      'navigation.nav-item': NavigationNavItem;
       'navigation.nav-link': NavigationNavLink;
       'shared.icon-tec': SharedIconTec;
       'shared.listitem': SharedListitem;
